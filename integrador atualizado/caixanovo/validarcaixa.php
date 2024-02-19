@@ -74,7 +74,7 @@ function CalcularDesconto()
 
     $query = "SELECT * FROM tb_produtos_venda
     LEFT JOIN tb_produtos ON tb_produtos_venda.id_produtos=tb_produtos.id
-    WHERE processamento = 0 LIMIT 100";
+    WHERE processamento = 0";
     $resultados = $conexaos->query($query);
 
     $soma = 0;
@@ -125,3 +125,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
 }
+
+
