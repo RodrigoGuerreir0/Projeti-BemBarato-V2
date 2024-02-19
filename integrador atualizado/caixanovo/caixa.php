@@ -73,7 +73,7 @@ $dados = ConsultarCaixa();
                                         </p>
                                     </div>
                                 </fieldset>
-                                <form action="processar_compra.php" method="post">
+                                <form action="MetodoPagamento.php" method="post">
                                     <fieldset class="ValorCompra">
                                         <legend class="legend"><b>Valor da Compra</b></legend>
                                         <div class="centralizarqtdgeral-main">

@@ -74,4 +74,22 @@ function PassarProduto()
 
 PassarProduto();
 
+function InserirQuantidade()
+{
+    $quantidade = $_GET['num1'];
+
+    $conexao = new PDO("mysql:host=localhost;dbname=bd_bembarato", "root", "");
+
+    $sql_insert = "INSERT INTO tb_produtos_venda (Quantidade) VALUES ($quantidade)";
+    if ($conexao->exec($sql_insert)) {
+        echo "Quantidade inserida com sucesso na tabela de vendas";
+    } else {
+        echo "Erro ao inserir quantidade na tabela de vendas: " . $conexao->errorInfo()[2];
+    }
+    
+    $conexao = null;
+}
+
+InserirQuantidade(); 
+
 

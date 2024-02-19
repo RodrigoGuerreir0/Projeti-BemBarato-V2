@@ -18,7 +18,7 @@ function criarAlerta() {
       
     container.innerHTML = `
         <h2>Quantidade</h2>
-        <form id="formCalculo" onsubmit="realizarCalculo(); return false;">
+        <form method="GET" id="formCalculo" action="pesquisar.php" onsubmit="realizarCalculo(); return false;">
             <input type="number" id="num1" name="num1"><br><br>
             <input type="submit" value="Calcular">
         </form>
